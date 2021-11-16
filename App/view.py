@@ -160,6 +160,7 @@ def thread_cycle():
 
 
 if __name__ == "__main__":
+    print("Initial recursion limit: " + str(sys.getrecursionlimit()))
     threading.stack_size(67108864)  # 64MB stack
     sys.setrecursionlimit(2 ** 20)
     thread = threading.Thread(target=thread_cycle)
